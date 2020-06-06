@@ -4,3 +4,4 @@ body{
 }
 table td,table tr{ border: 0.3ex solid blue; margin: auto;}
 .err{text-align:center; font-weight:bold; color:red;}
+.costoFinale{font-weight: bold; font-size: 2rem;}
