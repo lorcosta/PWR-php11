@@ -1,0 +1,8 @@
+1)La chiave primaria delle tabelle auto_nuove è l'ID, identifica ogni auto diversificandola
+Il flag autoincrement indica che il valore di quel campo deve essere incrementato ad ogni aggiunta
+di una nuova riga della tabella in modo automatico. È utile perchè permette di definire in modo univoco
+una riga e non si deve inventare una chiave primaria.
+2)Le differenze degli utenti sono che nel database creato da me gli utenti uReadOnly e uReadWrite
+non sono presenti e non hanno alcun privilegio, mentre nel database scaricato dal sito
+gli utenti sono settati e hanno alcuni privilegi definiti ovvero possono eseguire solo
+determinate operazioni in base a quelle che gli vengono concesse.

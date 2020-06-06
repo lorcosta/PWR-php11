@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>PHP 11_2</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Lorenzo Costa" >
+    <link rel=stylesheet href=fogliodistile.css>
+    <script>
+    "use strict";
+      function checkPrezzo(prezzo){
+        var regex=/^\d+.?\d*$/;
+        if(prezzo<0){
+          window.alert("Veramente vuoi che ti regaliamo la macchina?")
+          return
+        }
+        if(!regex.test(prezzo)){
+          window.alert("Il prezzo inserito non è corretto. Inserisci un prezzo maggiore di zero")
+          return
+        }
+      }
+    </script>
+  </head>
+  <body>
+      <h1>Pagina realizzata con PHP</h1>
+      <p>Autore della pagina: Lorenzo Costa</p>
+      <form action="11_2.php" method="post">
+        <p>Inserisci il prezzo massimo</p>
+        <input type="number" name="maxPrezzo" placeholder="Inserisci il tuo prezzo massimo" min="1" onchange="checkPrezzo(maxPrezzo.value)" step="0.01">
+        <input type="submit" name="cerca" value="Trova le auto">
+      </form>
+  </body>
+</html>

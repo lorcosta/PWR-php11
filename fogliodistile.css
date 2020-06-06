@@ -1,0 +1,6 @@
+body{
+  font-family:Helvetica,sans-serif;
+  background-color: SkyBlue;
+}
+table td,table tr{ border: 0.3ex solid blue; margin: auto;}
+.err{text-align:center; font-weight:bold; color:red;}
