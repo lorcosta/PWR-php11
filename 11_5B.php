@@ -4,6 +4,7 @@
     $session=false;
   }elseif(session_status()!=PHP_SESSION_ACTIVE){
     session_start();
+    $prodotti=$_SESSION["procediAcquisto"]=$_REQUEST;
   }
  ?>
 <!DOCTYPE html>
@@ -38,7 +39,7 @@
           printf('<p class="err">Errore: connessione al database fallita. %s</p>',mysqli_connect_error());
         }
           foreach ($prodotti as $key => $value) {
-            if($key!="PHPSESSID"){
+            if($key!="acquista" && $key!="PHPSESSID" && $value!=0){
             $query="SELECT `ID`,`NOME`,`COSTO` FROM `auto_nuove` WHERE `ID`=".$key;
             $result=mysqli_query($con,$query);
             if(!$result){
@@ -57,16 +58,13 @@
           if(!mysqli_close($con)){
             printf("<p class=\"err\">Errore di chiusura della connessione, impossibile rilasciare le risorse.</p>");
           }
-            //printf("<tr><td>%s</td><td>%d</td><td>%f</td></tr>",$row["NOME"],$row["QUANTITA"],$row["COSTO"]);
-            //echo("<tr><td>".$row["ID"]."</td><td>".$row["NOME"]."</td><td>".$row["COSTO"]."</td><td><input type=\"number\" name=".$row["ID"]." value=\"0\"></td></tr>");
          ?>
       </table>
       <?php
       echo "<p class=\"costoFinale\">Costo totale degli oggetti selezionati: ".$totalCost."€</p>";
       //$_SESSION["procediAcquisto"]=$prodotti;
        ?>
-       <form action="<?php echo $_SERVER['PHP_SELF']; ?
-       ì+" method="get">
+       <form action="11_5C.php" method="get">
          <input type="submit" name="procediAcquisto" value="Procedi">
        </form>
 
