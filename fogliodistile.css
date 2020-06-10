@@ -2,6 +2,11 @@ body{
   font-family:Helvetica,sans-serif;
   background-color: SkyBlue;
 }
-table td,table tr{ border: 0.3ex solid blue; margin: auto;}
+/*border-bottom: 0.5ex solid blue;*/
+table{border-collapse: collapse;width:60%;}
+th{background-color: blue; color:white;text-align: left;}
+table td,table tr{margin: auto;}
+tr:nth-child(even){background-color: azure;}
+tr:nth-child(odd){background-color: cornflowerblue;}
 .err{text-align:center; font-weight:bold; color:red;}
 .costoFinale{font-weight: bold; font-size: 2rem;}
